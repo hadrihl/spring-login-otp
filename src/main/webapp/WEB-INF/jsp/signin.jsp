@@ -31,6 +31,10 @@
                         <button type="submit" class="btn btn-primary w-100">Sign in with Email</button>
                     </div>
                 </form:form>
+                
+                <div class="form-group mt-2 d-grid gap-2">
+                	<a href="/oauth2/authorization/github" class="btn btn-light w-100">Sign in with Github</a>
+                </div>
     
                 <div class="footer mt-5 text-center">
                     &copy; 2023. Made with <i class="fa-solid fa-heart"></i> in Penang. <br/>

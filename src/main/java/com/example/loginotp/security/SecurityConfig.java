@@ -1,5 +1,6 @@
 package com.example.loginotp.security;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
@@ -51,6 +52,9 @@ public class SecurityConfig {
 				.defaultSuccessUrl("/dashboard")
 				.loginProcessingUrl("/login")
 				.permitAll()
+				.and()
+			.oauth2Login()
+				.loginPage("/login")
 				.and()
 			.logout()
 				.logoutSuccessUrl("/")
