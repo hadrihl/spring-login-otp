@@ -28,13 +28,21 @@
                         <input type="password" id="password" name="password" class="form-control" placeholder="Password" required />
                     </div>
                     <div class="form-group mt-2 d-grid gap-2">
-                        <button type="submit" class="btn btn-primary w-100">Sign in with Email</button>
+                        <button type="submit" class="btn btn-info w-100">Sign in with Email</button>
                     </div>
                 </form:form>
                 
                 <div class="form-group mt-2 d-grid gap-2">
-                	<a href="/oauth2/authorization/github" class="btn btn-light w-100">Sign in with Github</a>
+                <span class="text-center"></span>
+                	<a href="/oauth2/authorization/github" class="btn btn-dark w-100">Sign in with Github</a>
                 </div>
+              	<div class="form-group mt-2 d-grid gap-2">
+              		<a href="/oauth2/authorization/google" class="btn btn-light w-100">Sign in with Google</a>
+              	</div>
+              	<div class="form-group mt-2 d-grid gap-2">
+              		<a href="/oauth2/authorization/facebook" class="btn btn-primary w-100">Sign in with Facebook</a>
+              	</div>  
+              
     
                 <div class="footer mt-5 text-center">
                     &copy; 2023. Made with <i class="fa-solid fa-heart"></i> in Penang. <br/>

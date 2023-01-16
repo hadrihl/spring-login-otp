@@ -11,6 +11,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 
+import com.example.loginotp.service.CustomOauth2UserService;
 import com.example.loginotp.service.UserDetailsServiceImpl;
 
 @Configuration
@@ -55,6 +56,7 @@ public class SecurityConfig {
 				.and()
 			.oauth2Login()
 				.loginPage("/login")
+				.userInfoEndpoint().userService(userService).and()
 				.and()
 			.logout()
 				.logoutSuccessUrl("/")
@@ -64,4 +66,7 @@ public class SecurityConfig {
 		
 		return http.build();
 	}
+	
+	@Autowired
+	private CustomOauth2UserService userService;
 }
